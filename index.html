@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mosán Santos – Portfólio</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Tailwind (via CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <!-- CSS da nova seção -->
+  <style>
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="nav-container">
+    <div class="logo">MOSÁN SANTOS.</div>
+    <div class="nav-links">
+      <a href="#sobre" class="nav-link">Sobre</a>
+      <a href="#servicos" class="nav-link">Serviços</a>
+      <a href="#portfolio" class="nav-link">Portfólio</a>
+      <a href="#blog" class="nav-link">Blog</a>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#blog">Blog</a>
+  </div>
+  <div id="hamburger" class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- HERO COM ANIMAÇÃO DE LETRAS -->
+  <section id="hero" class="hero-section">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1 id="hero-title" class="hero-title"></h1>
+      <h2 id="hero-sub1" class="hero-sub"></h2>
+      <h2 id="hero-sub2" class="hero-sub"></h2>
+      <p class="tagline">O que eu faço, as IAs (ainda) não fazem.</p>
+      <a
+        href="https://wa.me/5521999417097?text=Solicite%20um%20or%C3%A7amento%2C%20por%20favor!"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="cta-button"
+      >
+        Solicite um orçamento
+      </a>
+    </div>
+  </section>
+
+  <!-- Seção SERVIÇOS -->
+  <section id="servicos" class="section_about">
+    <div class="container">
+      <h2>SERVIÇOS</h2>
+      <p>Web design, desenvolvimento e SEO sob medida para atrair clientes e impulsionar suas vendas.</p>
+      <p>Junte-se aos que já crescem: fale comigo agora!</p>
+      <a href="#clientes" class="arrow arrow-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </a>
+      <div id="clientes" class="logos">
+        <img src="./assets/img/logo1.png" alt="RSBARRA">
+        <img src="./assets/img/logo2.png" alt="Hiran Ranger">
+        <img src="./assets/img/logo3.png" alt="Grande Loja de Jardineiros Livres do Brasil">
+        <img src="./assets/img/logo4.png" alt="@veronica_a_vero - Palestrante">
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção SOBRE -->
+  <section id="sobre" class="section_about">
+    <div class="container">
+      <div class="about_wrap">
+        <div class="about_text">
+          <h3 class="heading_style">
+            Um site que deixa uma
+            <span class="span_tilt">impressão duradoura!</span>
+          </h3>
+        </div>
+        <div class="about_info">
+          <p>
+            Olá, sou <strong>Mosán Santos</strong> — um freelancer especializado em web design, desenvolvimento e SEO.
+            Crio soluções únicas e eficazes, com todo cuidado para dar vida à sua visão. Vamos conversar?
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner_sobre">
+      <div class="marquee">
+        +++ VAMOS CONVERSAR +++ VAMOS CONVERSAR +++ VAMOS CONVERSAR +++
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção PORTFÓLIO (3 em cima e 3 embaixo) -->
+ <section id="portfolio" class="section_about">
+  <div class="services-container max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="service-card">
+          <div class="card-number"></div>
+          <h3 class="card-title">SOLUÇÕES EM DESENVOLVIMENTO DE SISTEMAS</h3>
+          <p class="card-description">Leve seu negócio para o próximo nível com sistemas personalizados, modernos e de alta performance!</p>
+          <a href="#" class="card-button">SOBRE DESENVOLVIMENTO</a>
+        </div>
+        <!-- Card 2 -->
+        <div class="service-card">
+          <div class="card-number"></div>
+          <h3 class="card-title">ANÁLISE PREDITIVA DE DADOS</h3>
+          <p class="card-description">Antecipe tendências e tome decisões certeiras com a Análise Preditiva de Dados!</p>
+          <a href="#" class="card-button">SOBRE ANÁLISE PREDITIVA</a>
+        </div>
+        <!-- Card 3 -->
+        <div class="service-card">
+          <div class="card-number"></div>
+          <h3 class="card-title">AUTOMATIZAÇÃO DE WHATSAPP E PLANILHAS</h3>
+          <p class="card-description">Otimize sua rotina e ganhe eficiência com automação de WhatsApp e planilhas!</p>
+          <a href="#" class="card-button">SOBRE AUTOMATIZAÇÃO</a>
+        </div>
+        <!-- Card 4 -->
+        <div class="service-card">
+          <div class="card-number"></div>
+          <h3 class="card-title">NEGÓCIOS 4.0: TRANSFORMAÇÃO DIGITAL</h3>
+          <p class="card-description">Prepare sua empresa para o futuro com soluções 4.0 impulsionadas por Inteligência Artificial!</p>
+          <a href="#" class="card-button">SOBRE NEGÓCIOS 4.0</a>
+        </div>
+        <!-- Card 5 -->
+        <div class="service-card">
+          <div class="card-number"></div>
+          <h3 class="card-title">DESENVOLVIMENTO DE WEBSITES</h3>
+          <p class="card-description">Crie uma presença digital marcante com websites modernos e e-commerces funcionais!</p>
+          <a href="#" class="card-button">SOBRE WEBSITES</a>
+        </div>
+        <!-- Card 6 -->
+        <div class="service-card">
+          <div class="card-number"></div>
+          <h3 class="card-title">SOLUÇÕES EM BIG DATA E ANÁLISE</h3>
+          <p class="card-description">Transforme dados em decisões estratégicas e resultados extraordinários com Big Data!</p>
+          <a href="#" class="card-button">SOBRE BIG DATA</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOVA SEÇÃO: PROJECT IN MIND -->
+  <section class="project-section">
+    <div class="project-padding-global project-padding-section-large">
+      <div class="project-container-large">
+        <div class="project-newsletter_content-wrap">
+          <div class="project-label_capital">PROJETO EM MENTE?</div>
+          <h2 class="project-heading-style-h1">Vamos fazer seu<br><span class="project-span_tilt">negócio brilhar</span></h2>
+          <div class="project-newsletter_content">
+     <p 
+  class="project-text-size-medium" 
+  data-aos="fade-up" 
+  data-aos-duration="800" 
+  data-aos-easing="ease-out-back"
+>
+  Serviços premium de web design, desenvolvimento e SEO para ajudar sua empresa a se destacar.
+</p>  <a href="https://wa.me/5521999417097?text=Ol%C3%A1%2C%20tenho%20um%20projeto%20em%20mente%20e%20gostaria%20de%20conversar!" target="_blank" rel="noopener noreferrer" class="project-button is-icon">
+              <div>ENTRE EM CONTATO</div>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção BLOG -->
+  <section id="blog" class="section_about">
+    <div class="container">
+      <h2>Blog</h2>
+      <p>Em breve aqui você encontrará artigos e novidades.</p>
+    </div>
+  </section>
+
+  <!-- Scripts no fim do body -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

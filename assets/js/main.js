@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Hero letter-by-letter random fadeUp
    const heroTexts = {
     "hero-title": "WEB DESIGNER E DEVELOPER",
-    "hero-sub1":  "Serviços premium de web design, desenvolvimento de Sistema Integrados com IAs personalizadas",
+    "hero-sub1":  "Serviços premium de web design, desenvolvimento de Sistemas Integrados com IAs personalizadas",
     "hero-sub2":  "para ajudar sua empresa a se destacar e vender mais."
   };
 

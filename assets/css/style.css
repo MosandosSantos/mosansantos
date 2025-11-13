@@ -1,3 +1,4 @@
+
 /* ==================================================
    RESET E ESTILIZAÇÕES GLOBAIS
    ================================================== */
@@ -90,11 +91,11 @@ a {
   transform: translateX(-50%);
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
-  background: rgba(210, 190, 161, 0.15);
+  gap: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(6px);
   border: 1px solid currentColor;
-  padding: 0.3rem 1rem;
+  padding: 0.75rem 2rem;
   z-index: 20;
   white-space: nowrap;
 }
@@ -710,4 +711,305 @@ a {
   filter: saturate(1);
   opacity: 1;
   z-index: 10;
+}
+
+/* ==================================================
+   CURSOR CUSTOMIZADO
+   ================================================== */
+* {
+  cursor: none !important;
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d2bea1;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
+  mix-blend-mode: difference;
+}
+
+.cursor-follower {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #d2bea1;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, border-color 0.3s;
+  opacity: 0.5;
+}
+
+.custom-cursor.cursor-hover {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(210, 190, 161, 0.5);
+}
+
+.cursor-follower.cursor-hover {
+  width: 60px;
+  height: 60px;
+  border-color: #fff;
+}
+
+/* Para dispositivos touch, remover cursor customizado */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+  .custom-cursor,
+  .cursor-follower {
+    display: none;
+  }
+}
+
+/* ==================================================
+   PARTICLES.JS CONTAINER
+   ================================================== */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* ==================================================
+   GLASSMORPHISM AVANÇADO
+   ================================================== */
+.nav-container {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(210, 190, 161, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.service-card {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(210, 190, 161, 0.1);
+}
+
+/* ==================================================
+   GRADIENTES ANIMADOS
+   ================================================== */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.service-card::before {
+  background: linear-gradient(
+    90deg,
+    #d2bea1,
+    #c4ad94,
+    #b89d81,
+    #d2bea1
+  );
+  background-size: 300% 300%;
+  animation: gradientShift 3s ease infinite;
+}
+
+/* ==================================================
+   HOVER EFFECTS AVANÇADOS
+   ================================================== */
+.cta-button,
+.project-button.is-icon {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform;
+}
+
+.cta-button::before,
+.project-button.is-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.cta-button:hover::before,
+.project-button.is-icon:hover::before {
+  transform: translateX(100%);
+}
+
+.cta-button:hover,
+.project-button.is-icon:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 40px rgba(210, 190, 161, 0.4);
+}
+
+/* ==================================================
+   SCROLL REVEAL ANIMATIONS
+   ================================================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ==================================================
+   LOADING ANIMATIONS
+   ================================================== */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.loading {
+  background: linear-gradient(
+    to right,
+    #1a1a1a 0%,
+    #2a2a2a 50%,
+    #1a1a1a 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* ==================================================
+   PARALLAX SECTIONS
+   ================================================== */
+.hero-section {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  will-change: background-position;
+}
+
+/* ==================================================
+   SMOOTH TRANSITIONS
+   ================================================== */
+section {
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* ==================================================
+   GLOW EFFECTS
+   ================================================== */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px #d2bea1, 0 0 10px #d2bea1, 0 0 15px #d2bea1;
+  }
+  50% {
+    box-shadow: 0 0 10px #d2bea1, 0 0 20px #d2bea1, 0 0 30px #d2bea1;
+  }
+}
+
+.service-card:hover {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* ==================================================
+   TEXT GRADIENT EFFECTS
+   ================================================== */
+.heading_style,
+.project-heading-style-h1 {
+  background: linear-gradient(135deg, #ffffff 0%, #d2bea1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 5s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* ==================================================
+   PERFORMANCE OPTIMIZATIONS
+   ================================================== */
+.service-card,
+.cta-button,
+.project-button,
+.nav-container {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reduzir animações em dispositivos com preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==================================================
+   MELHORIAS DE ACESSIBILIDADE
+   ================================================== */
+a:focus,
+button:focus,
+.cta-button:focus,
+.project-button:focus {
+  outline: 2px solid #d2bea1;
+  outline-offset: 4px;
+}
+
+/* ==================================================
+   RESPONSIVE ENHANCEMENTS
+   ================================================== */
+@media (max-width: 768px) {
+  .hero-section {
+    background-attachment: scroll;
+  }
+
+  #particles-js {
+    opacity: 0.5;
+  }
 }

@@ -1,29 +1,79 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mosán Santos – Portfólio</title>
 
-  <!-- Google Fonts -->
+  <!-- SEO Meta Tags -->
+  <title>Mosán Santos – Web Designer & Developer | Portfólio Profissional</title>
+  <meta name="description" content="Especialista em web design, desenvolvimento de sistemas integrados com IA e SEO. Crio soluções digitais premium para empresas que desejam se destacar e vender mais." />
+  <meta name="keywords" content="web design, desenvolvimento web, sistemas integrados, IA, inteligência artificial, SEO, big data, análise preditiva, automação whatsapp, transformação digital, portfólio" />
+  <meta name="author" content="Mosán Santos" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#d2bea1" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mosansantos.com.br/" />
+  <meta property="og:title" content="Mosán Santos – Web Designer & Developer" />
+  <meta property="og:description" content="Serviços premium de web design, desenvolvimento e SEO para ajudar sua empresa a se destacar." />
+  <meta property="og:image" content="https://mosansantos.com.br/assets/img/og-image.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://mosansantos.com.br/" />
+  <meta name="twitter:title" content="Mosán Santos – Web Designer & Developer" />
+  <meta name="twitter:description" content="Serviços premium de web design, desenvolvimento e SEO para ajudar sua empresa a se destacar." />
+  <meta name="twitter:image" content="https://mosansantos.com.br/assets/img/og-image.jpg" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://mosansantos.com.br/" />
+
+  <!-- Preconnect para fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Google Fonts com display=swap para performance -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
-    rel="stylesheet"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400;1,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@0,400;1,400;1,700&display=swap"
     rel="stylesheet"
   />
 
   <!-- Tailwind (via CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com" defer></script>
+
+  <!-- AOS - Animate On Scroll Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <!-- CSS externo -->
   <link rel="stylesheet" href="assets/css/style.css" />
-  
-  <!-- CSS da nova seção -->
-  <style>
-  </style>
+
+  <!-- Schema.org JSON-LD para SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mosán Santos",
+    "jobTitle": "Web Designer & Developer",
+    "url": "https://mosansantos.com.br",
+    "sameAs": [
+      "https://www.linkedin.com/in/mosansantos",
+      "https://github.com/mosansantos"
+    ],
+    "description": "Especialista em web design, desenvolvimento de sistemas integrados com IA e SEO",
+    "knowsAbout": ["Web Design", "Desenvolvimento Web", "SEO", "Inteligência Artificial", "Big Data", "Análise Preditiva", "Automação"],
+    "offers": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Serviços de Web Design e Desenvolvimento",
+        "description": "Desenvolvimento de sistemas, websites, análise preditiva, automação e transformação digital"
+      }
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -53,6 +103,8 @@
 
   <!-- HERO COM ANIMAÇÃO DE LETRAS -->
   <section id="hero" class="hero-section">
+    <!-- Canvas para partículas -->
+    <div id="particles-js"></div>
     <div class="overlay"></div>
     <div class="hero-content">
       <h1 id="hero-title" class="hero-title"></h1>
@@ -71,11 +123,11 @@
   </section>
 
   <!-- Seção SERVIÇOS -->
-  <section id="servicos" class="section_about">
+  <section id="servicos" class="section_about" data-aos="fade-up" data-aos-duration="1200">
     <div class="container">
-      <h2>SERVIÇOS</h2>
-      <p>Web design, desenvolvimento e SEO sob medida para atrair clientes e impulsionar suas vendas.</p>
-      <p>Junte-se aos que já crescem: fale comigo agora!</p>
+      <h2 data-aos="fade-down" data-aos-delay="200">SERVIÇOS</h2>
+      <p data-aos="fade-up" data-aos-delay="300">Web design, desenvolvimento e SEO sob medida para atrair clientes e impulsionar suas vendas.</p>
+      <p data-aos="fade-up" data-aos-delay="400">Junte-se aos que já crescem: fale comigo agora!</p>
 
       <a href="#clientes" class="arrow arrow-circle">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -83,10 +135,10 @@
         </svg>
       </a>
       <div id="clientes" class="logos">
-        <img src="./assets/img/logo1.png" alt="RSBARRA">
-        <img src="./assets/img/logo2.png" alt="Hiran Ranger">
-        <img src="./assets/img/logo3.png" alt="Grande Loja de Jardineiros Livres do Brasil">
-        <img src="./assets/img/logo4.png" alt="@veronica_a_vero - Palestrante">
+        <img src="./assets/img/logo1.png" alt="RSBARRA - Cliente" loading="lazy" data-aos="fade-up" data-aos-delay="100">
+        <img src="./assets/img/logo2.png" alt="Hiran Ranger - Cliente" loading="lazy" data-aos="fade-up" data-aos-delay="200">
+        <img src="./assets/img/logo3.png" alt="Grande Loja de Jardineiros Livres do Brasil - Cliente" loading="lazy" data-aos="fade-up" data-aos-delay="300">
+        <img src="./assets/img/logo4.png" alt="@veronica_a_vero - Palestrante - Cliente" loading="lazy" data-aos="fade-up" data-aos-delay="400">
       </div>
     </div>
   </section>
@@ -94,29 +146,29 @@
 <!-- Seção SOBRE -->
   <section id="portfolio" class="section_about">
   
-<div class="thumbs-container">
-  <img src="./assets/img/portfolio/1.svg" alt="..." />
-  <img src="./assets/img/portfolio/2.svg" alt="..." />
-  <img src="./assets/img/portfolio/3.svg" alt="..." />
-  <img src="./assets/img/portfolio/4.svg" alt="..." />
-  <img src="./assets/img/portfolio/5.svg" alt="..." />
-  <img src="./assets/img/portfolio/6.svg" alt="..." />
-  <img src="./assets/img/portfolio/7.svg" alt="..." />
-  <img src="./assets/img/portfolio/8.svg" alt="..." />
+<div class="thumbs-container" data-aos="fade-up" data-aos-duration="1000">
+  <img src="./assets/img/portfolio/1.svg" alt="Projeto de Web Design - Portfolio 1" loading="lazy" />
+  <img src="./assets/img/portfolio/2.svg" alt="Projeto de Desenvolvimento - Portfolio 2" loading="lazy" />
+  <img src="./assets/img/portfolio/3.svg" alt="Projeto de Sistema Integrado - Portfolio 3" loading="lazy" />
+  <img src="./assets/img/portfolio/4.svg" alt="Projeto de E-commerce - Portfolio 4" loading="lazy" />
+  <img src="./assets/img/portfolio/5.svg" alt="Projeto de Landing Page - Portfolio 5" loading="lazy" />
+  <img src="./assets/img/portfolio/6.svg" alt="Projeto de Automação - Portfolio 6" loading="lazy" />
+  <img src="./assets/img/portfolio/7.svg" alt="Projeto de Análise de Dados - Portfolio 7" loading="lazy" />
+  <img src="./assets/img/portfolio/8.svg" alt="Projeto de Transformação Digital - Portfolio 8" loading="lazy" />
 </div>
 
 </section>
   <!-- Seção SOBRE -->
-  <section id="sobre" class="section_about">
+  <section id="sobre" class="section_about" data-aos="fade-up" data-aos-duration="1200">
     <div class="container">
       <div class="about_wrap">
-        <div class="about_text">
+        <div class="about_text" data-aos="fade-right" data-aos-delay="200">
           <h3 class="heading_style">
             Um site que deixa uma
             <span class="span_tilt">impressão duradoura!</span>
           </h3>
         </div>
-        <div class="about_info">
+        <div class="about_info" data-aos="fade-left" data-aos-delay="400">
           <p>
             Olá, sou <strong>Mosán Santos</strong> — um freelancer especializado em web design, desenvolvimento e SEO.
             Crio soluções únicas e eficazes, com todo cuidado para dar vida a sua visão. Vamos conversar?
@@ -133,46 +185,46 @@
   </section>
 
   <!-- Seção PORTFÓLIO (3 em cima e 3 embaixo) -->
- <section id="portfolio" class="section_about">
+ <section id="portfolio" class="section_about" data-aos="fade-up">
   <div class="services-container max-w-7xl mx-auto px-4">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Card 1 -->
-        <div class="service-card">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
           <div class="card-number"></div>
           <h3 class="card-title">SOLUÇÕES EM DESENVOLVIMENTO DE SISTEMAS</h3>
           <p class="card-description">Leve seu negócio para o próximo nível com sistemas personalizados, modernos e de alta performance!</p>
           <a href="#" class="card-button">SOBRE DESENVOLVIMENTO</a>
         </div>
         <!-- Card 2 -->
-        <div class="service-card">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
           <div class="card-number"></div>
           <h3 class="card-title">ANÁLISE PREDITIVA DE DADOS</h3>
           <p class="card-description">Antecipe tendências e tome decisões certeiras com a Análise Preditiva de Dados!</p>
           <a href="#" class="card-button">SOBRE ANÁLISE PREDITIVA</a>
         </div>
         <!-- Card 3 -->
-        <div class="service-card">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
           <div class="card-number"></div>
           <h3 class="card-title">AUTOMATIZAÇÃO DE WHATSAPP E PLANILHAS</h3>
           <p class="card-description">Otimize sua rotina e ganhe eficiência com automação de WhatsApp e planilhas!</p>
           <a href="#" class="card-button">SOBRE AUTOMATIZAÇÃO</a>
         </div>
         <!-- Card 4 -->
-        <div class="service-card">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
           <div class="card-number"></div>
           <h3 class="card-title">NEGÓCIOS 4.0: TRANSFORMAÇÃO DIGITAL</h3>
           <p class="card-description">Prepare sua empresa para o futuro com soluções 4.0 impulsionadas por Inteligência Artificial!</p>
           <a href="#" class="card-button">SOBRE NEGÓCIOS 4.0</a>
         </div>
         <!-- Card 5 -->
-        <div class="service-card">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
           <div class="card-number"></div>
           <h3 class="card-title">DESENVOLVIMENTO DE WEBSITES</h3>
           <p class="card-description">Crie uma presença digital marcante com websites modernos e e-commerces funcionais!</p>
           <a href="#" class="card-button">SOBRE WEBSITES</a>
         </div>
         <!-- Card 6 -->
-        <div class="service-card">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
           <div class="card-number"></div>
           <h3 class="card-title">SOLUÇÕES EM BIG DATA E ANÁLISE</h3>
           <p class="card-description">Transforme dados em decisões estratégicas e resultados extraordinários com Big Data!</p>
@@ -183,21 +235,23 @@
   </section>
 
   <!-- NOVA SEÇÃO: PROJECT IN MIND -->
-  <section class="project-section">
+  <section class="project-section" data-aos="fade-up" data-aos-duration="1200">
     <div class="project-padding-global project-padding-section-large">
       <div class="project-container-large">
         <div class="project-newsletter_content-wrap">
-          <div class="project-label_capital">PROJETO EM MENTE?</div>
-          <h2 class="project-heading-style-h1">Vamos fazer seu<br><span class="project-span_tilt">negócio brilhar</span></h2>
+          <div class="project-label_capital" data-aos="fade-down" data-aos-delay="100">PROJETO EM MENTE?</div>
+          <h2 class="project-heading-style-h1" data-aos="fade-up" data-aos-delay="200">Vamos fazer seu<br><span class="project-span_tilt">negócio brilhar</span></h2>
           <div class="project-newsletter_content">
-     <p 
-  class="project-text-size-medium" 
-  data-aos="fade-up" 
-  data-aos-duration="800" 
-  data-aos-easing="ease-out-back"
->
-  Serviços premium de web design, desenvolvimento e SEO para ajudar sua empresa a se destacar.
-</p>  <a href="https://wa.me/5521999417097?text=Ol%C3%A1%2C%20tenho%20um%20projeto%20em%20mente%20e%20gostaria%20de%20conversar!" target="_blank" rel="noopener noreferrer" class="project-button is-icon">
+            <p
+              class="project-text-size-medium"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-duration="800"
+              data-aos-easing="ease-out-back"
+            >
+              Serviços premium de web design, desenvolvimento e SEO para ajudar sua empresa a se destacar.
+            </p>
+            <a href="https://wa.me/5521999417097?text=Ol%C3%A1%2C%20tenho%20um%20projeto%20em%20mente%20e%20gostaria%20de%20conversar!" target="_blank" rel="noopener noreferrer" class="project-button is-icon" data-aos="zoom-in" data-aos-delay="400">
               <div>ENTRE EM CONTATO</div>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -248,25 +302,13 @@
 
       <!-- Coluna 3: CMS -->
       <div>
-        <h3 class="uppercase tracking-wider mb-3">CMS</h3>
-        <ul class="space-y-2">
-          <li><a href="#" class="hover:text-white">Trabalho</a></li>
-          <li><a href="#" class="hover:text-white">Precificação</a></li>
-          <li><a href="#" class="hover:text-white">Blogue</a></li>
-          <li><a href="#" class="hover:text-white">Postagem do Blog</a></li>
-        </ul>
+      
+         
       </div>
 
       <!-- Coluna 4: Utilitários -->
       <div>
-        <h3 class="uppercase tracking-wider mb-3">Utilitários</h3>
-        <ul class="space-y-2">
-          <li><a href="#" class="hover:text-white">Página de Erro 404</a></li>
-          <li><a href="#" class="hover:text-white">Protegido por Senha</a></li>
-          <li><a href="#" class="hover:text-white">Guia de Estilo</a></li>
-          <li><a href="#" class="hover:text-white">Licenciamento</a></li>
-          <li><a href="#" class="hover:text-white">Registro de Alterações</a></li>
-        </ul>
+        
       </div>
     </div>
 
@@ -281,7 +323,26 @@
 
   <!-- Scripts no fim do body -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script>
+
+  <!-- AOS - Animate On Scroll -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Particles.js para efeitos de partículas -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
   <script src="assets/js/main.js"></script>
+
+  <!-- Inicializar AOS -->
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+      offset: 100,
+      easing: 'ease-out-cubic'
+    });
+  </script>
 </body>
 </html>
 

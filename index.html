@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -84,7 +83,7 @@
       <a href="#sobre" class="nav-link">Sobre</a>
       <a href="#servicos" class="nav-link">Serviços</a>
       <a href="#portfolio" class="nav-link">Portfólio</a>
-      <a href="#blog" class="nav-link">Contatos</a>
+      <a href="#orcamento" class="nav-link">Orçamento</a>
     </div>
   </nav>
 
@@ -93,7 +92,7 @@
     <a href="#sobre">Sobre</a>
     <a href="#servicos">Serviços</a>
     <a href="#portfolio">Portfólio</a>
-    <a href="#blog">Contatos</a>
+    <a href="#orcamento">Orçamento</a>
   </div>
   <div id="hamburger" class="hamburger">
     <span></span>
@@ -143,21 +142,20 @@
     </div>
   </section>
 
-<!-- Seção SOBRE -->
+  <!-- Seção PORTFÓLIO - MINIATURAS -->
   <section id="portfolio" class="section_about">
-  
-<div class="thumbs-container" data-aos="fade-up" data-aos-duration="1000">
-  <img src="./assets/img/portfolio/1.svg" alt="Projeto de Web Design - Portfolio 1" loading="lazy" />
-  <img src="./assets/img/portfolio/2.svg" alt="Projeto de Desenvolvimento - Portfolio 2" loading="lazy" />
-  <img src="./assets/img/portfolio/3.svg" alt="Projeto de Sistema Integrado - Portfolio 3" loading="lazy" />
-  <img src="./assets/img/portfolio/4.svg" alt="Projeto de E-commerce - Portfolio 4" loading="lazy" />
-  <img src="./assets/img/portfolio/5.svg" alt="Projeto de Landing Page - Portfolio 5" loading="lazy" />
-  <img src="./assets/img/portfolio/6.svg" alt="Projeto de Automação - Portfolio 6" loading="lazy" />
-  <img src="./assets/img/portfolio/7.svg" alt="Projeto de Análise de Dados - Portfolio 7" loading="lazy" />
-  <img src="./assets/img/portfolio/8.svg" alt="Projeto de Transformação Digital - Portfolio 8" loading="lazy" />
-</div>
+    <div class="thumbs-container" data-aos="fade-up" data-aos-duration="1000">
+      <img src="./assets/img/portfolio/1.svg" alt="Projeto de Web Design - Portfolio 1" loading="lazy" />
+      <img src="./assets/img/portfolio/2.svg" alt="Projeto de Desenvolvimento - Portfolio 2" loading="lazy" />
+      <img src="./assets/img/portfolio/3.svg" alt="Projeto de Sistema Integrado - Portfolio 3" loading="lazy" />
+      <img src="./assets/img/portfolio/4.svg" alt="Projeto de E-commerce - Portfolio 4" loading="lazy" />
+      <img src="./assets/img/portfolio/5.svg" alt="Projeto de Landing Page - Portfolio 5" loading="lazy" />
+      <img src="./assets/img/portfolio/6.svg" alt="Projeto de Automação - Portfolio 6" loading="lazy" />
+      <img src="./assets/img/portfolio/7.svg" alt="Projeto de Análise de Dados - Portfolio 7" loading="lazy" />
+      <img src="./assets/img/portfolio/8.svg" alt="Projeto de Transformação Digital - Portfolio 8" loading="lazy" />
+    </div>
+  </section>
 
-</section>
   <!-- Seção SOBRE -->
   <section id="sobre" class="section_about" data-aos="fade-up" data-aos-duration="1200">
     <div class="container">
@@ -179,15 +177,15 @@
 
     <div class="banner_sobre">
       <div class="marquee">
-        +++ VAMOS CONVERSAR +++ VAMOS CONVERSAR +++ VAMOS CONVERSAR +++
+        +++ VAMOS CONVERSAR +++ VAMOS CONVERSAR +++ VAMOS CONVERSAR +++ VAMOS CONVERSAR +++ VAMOS CONVERSAR +++ VAMOS CONVERSAR +++
       </div>
     </div>
   </section>
 
-  <!-- Seção PORTFÓLIO (3 em cima e 3 embaixo) -->
- <section id="portfolio" class="section_about" data-aos="fade-up">
-  <div class="services-container max-w-7xl mx-auto px-4">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <!-- Seção PORTFÓLIO (cards de serviços) -->
+  <section id="portfolio" class="section_about" data-aos="fade-up">
+    <div class="services-container max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Card 1 -->
         <div class="service-card" data-aos="fade-up" data-aos-delay="100">
           <div class="card-number"></div>
@@ -263,8 +261,123 @@
     </div>
   </section>
 
-  
-    <!-- ... seu último section ... -->
+  <!-- NOVA SEÇÃO: FORMULÁRIO DE ORÇAMENTO -->
+  <section id="orcamento" class="quote-section" data-aos="fade-up" data-aos-duration="1200">
+    <div class="quote-container">
+      <!-- Lado esquerdo: texto -->
+      <div class="quote-copy" data-aos="fade-right" data-aos-delay="150">
+        <p class="quote-kicker">ORÇAMENTOS & PROJETOS</p>
+        <h2 class="quote-title">
+          Me conte sobre<br />
+          <span>o seu próximo projeto.</span>
+        </h2>
+        <p class="quote-text">
+          Preencha o formulário ao lado e eu retorno em até 1 dia útil com um caminho claro,
+          prático e sincero sobre como posso ajudar seu negócio.
+        </p>
+        <ul class="quote-list">
+          <li>Websites e landing pages premium</li>
+          <li>Sistemas sob medida e integrações com IA</li>
+          <li>Automação de processos e dados (BI, Python, etc.)</li>
+          <li>Consultoria estratégica de presença digital</li>
+        </ul>
+      </div>
+
+      <!-- Lado direito: formulário -->
+      <form
+        id="quote-form"
+        class="quote-form"
+        method="POST"
+        action="https://formspree.io/f/SEU_FORM_ID"
+        data-aos="fade-left"
+        data-aos-delay="250"
+        aria-describedby="quote-status"
+      >
+        <div class="quote-form-grid">
+          <div class="quote-field">
+            <label for="nome">Nome completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              autocomplete="name"
+              placeholder="Como devo te chamar?"
+              required
+            />
+          </div>
+
+          <div class="quote-field">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              placeholder="seuemail@empresa.com"
+              required
+            />
+          </div>
+
+          <div class="quote-field">
+            <label for="whatsapp">WhatsApp</label>
+            <input
+              type="tel"
+              id="whatsapp"
+              name="whatsapp"
+              autocomplete="tel"
+              placeholder="(21) 99999-9999"
+            />
+          </div>
+
+          <div class="quote-field">
+            <label for="tipo">Tipo de projeto</label>
+            <select id="tipo" name="tipo">
+              <option value="">Selecione…</option>
+              <option value="website">Website / Landing Page</option>
+              <option value="sistema">Sistema / Aplicação Web</option>
+              <option value="automacao">Automação / Bots / Integrações</option>
+              <option value="dados">BI / Dados / IA</option>
+              <option value="outro">Outro tipo de projeto</option>
+            </select>
+          </div>
+
+          <div class="quote-field quote-field-full">
+            <label for="orcamento_estimado">Faixa de investimento</label>
+            <select id="orcamento_estimado" name="orcamento_estimado">
+              <option value="">Prefiro não informar agora</option>
+              <option value="2-5">R$ 2.000 a R$ 5.000</option>
+              <option value="5-10">R$ 5.000 a R$ 10.000</option>
+              <option value="10-20">R$ 10.000 a R$ 20.000</option>
+              <option value="20+">Acima de R$ 20.000</option>
+            </select>
+          </div>
+
+          <div class="quote-field quote-field-full">
+            <label for="mensagem">Descreva brevemente o projeto</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              rows="4"
+              placeholder="Ex.: preciso de um site institucional com blog e área de agendamento, integrado ao WhatsApp…"
+              required
+            ></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="quote-button">
+          Enviar pedido de orçamento
+          <span class="quote-button-glow"></span>
+        </button>
+
+        <p class="quote-helper">
+          Ao enviar, você concorda em receber um retorno por e-mail ou WhatsApp.
+        </p>
+        <p id="quote-status" class="quote-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ... seu último section ... -->
 
   <!-- Rodapé -->
   <footer class="bg-black text-[#d2bea1] py-16 px-4">
@@ -275,16 +388,16 @@
         <div class="flex space-x-4">
           <a href="index.html" aria-label="LinkedIn" class="hover:text-white">
             <!-- substitua pelo SVG do LinkedIn -->
-            <svg class="w-6 h-6" fill="currentColor" …></svg>
+            <svg class="w-6 h-6" fill="currentColor"></svg>
           </a>
           <a href="#" aria-label="Twitter" class="hover:text-white">
-            <svg class="w-6 h-6" fill="currentColor" …></svg>
+            <svg class="w-6 h-6" fill="currentColor"></svg>
           </a>
           <a href="#" aria-label="Dribbble" class="hover:text-white">
-            <svg class="w-6 h-6" fill="currentColor" …></svg>
+            <svg class="w-6 h-6" fill="currentColor"></svg>
           </a>
           <a href="#" aria-label="Behance" class="hover:text-white">
-            <svg class="w-6 h-6" fill="currentColor" …></svg>
+            <svg class="w-6 h-6" fill="currentColor"></svg>
           </a>
         </div>
       </div>
@@ -296,19 +409,16 @@
           <li><a href="#hero" class="hover:text-white">Casa</a></li>
           <li><a href="#servicos" class="hover:text-white">Serviços</a></li>
           <li><a href="#sobre" class="hover:text-white">Sobre</a></li>
-          <li><a href="#blog" class="hover:text-white">Contato</a></li>
+          <li><a href="#orcamento" class="hover:text-white">Contato</a></li>
         </ul>
       </div>
 
       <!-- Coluna 3: CMS -->
       <div>
-      
-         
       </div>
 
       <!-- Coluna 4: Utilitários -->
       <div>
-        
       </div>
     </div>
 
@@ -318,8 +428,6 @@
       <a href="#hero" class="hover:text-white mt-2 md:mt-0">Para o topo ↑</a>
     </div>
   </footer>
-
-
 
   <!-- Scripts no fim do body -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
@@ -333,7 +441,7 @@
 
   <script src="assets/js/main.js"></script>
 
-  <!-- Inicializar AOS -->
+  <!-- Inicializar AOS + handler do formulário -->
   <script>
     AOS.init({
       duration: 1000,
@@ -342,7 +450,41 @@
       offset: 100,
       easing: 'ease-out-cubic'
     });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('quote-form');
+      const statusEl = document.getElementById('quote-status');
+
+      if (!form || !statusEl) return;
+
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        statusEl.textContent = 'Enviando seu pedido de orçamento...';
+        statusEl.classList.remove('quote-status--success', 'quote-status--error');
+
+        try {
+          const data = new FormData(form);
+          const response = await fetch(form.action, {
+            method: form.method,
+            headers: { 'Accept': 'application/json' },
+            body: data
+          });
+
+          if (response.ok) {
+            form.reset();
+            statusEl.textContent = 'Obrigado! Recebi o seu pedido e vou responder em breve.';
+            statusEl.classList.add('quote-status--success');
+          } else {
+            statusEl.textContent = 'Algo deu errado. Tente de novo ou fale comigo pelo WhatsApp.';
+            statusEl.classList.add('quote-status--error');
+          }
+        } catch (err) {
+          statusEl.textContent = 'Não foi possível enviar agora. Verifique sua conexão e tente novamente.';
+          statusEl.classList.add('quote-status--error');
+        }
+      });
+    });
   </script>
 </body>
 </html>
-

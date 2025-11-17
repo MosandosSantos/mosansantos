@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(git add:*)",
+      "Bash(git rm:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nImplementa transformação completa de UX/UI com SEO otimizado e animações modernas\n\n- Adiciona SEO completo: meta tags, Open Graph, Twitter Cards, Schema.org JSON-LD\n- Implementa animações AOS (Animate On Scroll) em todas as seções\n- Adiciona partículas animadas interativas no hero (particles.js)\n- Implementa cursor customizado com efeito de trail\n- Adiciona smooth scroll para navegação suave\n- Implementa glassmorphism avançado na navbar e cards\n- Adiciona gradientes animados e efeitos glow nos cards\n- Implementa parallax no hero com GSAP ScrollTrigger\n- Adiciona magnetic button effects nos CTAs\n- Implementa lazy loading em todas as imagens do portfólio\n- Adiciona efeitos de hover avançados com shimmer\n- Otimiza performance com preconnect, defer e will-change\n- Adiciona suporte a prefers-reduced-motion para acessibilidade\n- Melhora acessibilidade com focus states visíveis\n- Remove arquivo codigo_integrado.html obsoleto\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git rebase:*)",
+      "Bash(git diff:*)",
+      "Bash(git checkout:*)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

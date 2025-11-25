@@ -716,8 +716,10 @@ a {
 /* ==================================================
    CURSOR CUSTOMIZADO
    ================================================== */
-* {
-  cursor: none !important;
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
 }
 
 .custom-cursor {
@@ -1312,5 +1314,292 @@ button:focus,
   .quote-form {
     padding: 1.75rem 1.5rem;
   }
+}
+
+/* ==================================================
+   SEÇÃO DE DEPOIMENTOS (TESTIMONIALS)
+   ================================================== */
+.testimonials-section {
+  background: #000;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-section::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: -250px;
+  right: -250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(210, 190, 161, 0.08), transparent 70%);
+  pointer-events: none;
+  animation: floatTestimonial 20s ease-in-out infinite;
+}
+
+.testimonials-section::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  bottom: -200px;
+  left: -200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(210, 190, 161, 0.06), transparent 70%);
+  pointer-events: none;
+  animation: floatTestimonial 25s ease-in-out infinite reverse;
+}
+
+@keyframes floatTestimonial {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, 30px) scale(1.1);
+  }
+}
+
+.testimonials-header {
+  position: relative;
+  z-index: 2;
+}
+
+.label_capital {
+  color: #d2bea1;
+  opacity: 0.9;
+}
+
+.testimonials-grid {
+  position: relative;
+  z-index: 2;
+}
+
+/* Card de Depoimento */
+.testimonial-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(42, 42, 42, 0.8) 100%);
+  border: 1px solid rgba(210, 190, 161, 0.15);
+  border-radius: 20px;
+  padding: 32px 28px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  will-change: transform;
+}
+
+/* Borda animada no topo do card */
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d2bea1,
+    #c4ad94,
+    #d2bea1,
+    transparent
+  );
+  background-size: 200% 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: gradientSlide 3s linear infinite;
+}
+
+@keyframes gradientSlide {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.testimonial-card:hover::before {
+  opacity: 1;
+}
+
+/* Glow effect no hover */
+.testimonial-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(210, 190, 161, 0.3),
+    rgba(210, 190, 161, 0.1),
+    rgba(210, 190, 161, 0.3)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(210, 190, 161, 0.4);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(210, 190, 161, 0.15);
+}
+
+.testimonial-card:hover::after {
+  opacity: 1;
+}
+
+.testimonial-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Ícone de aspas */
+.testimonial-quote-icon svg {
+  opacity: 0.3;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-quote-icon svg {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+/* Texto do depoimento */
+.testimonial-text {
+  color: #e5d7c0;
+  font-size: 15px;
+  line-height: 1.7;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+/* Container do autor */
+.testimonial-author-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+/* Avatar placeholder */
+.testimonial-avatar {
+  flex-shrink: 0;
+}
+
+.avatar-placeholder {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d2bea1, #b89d81);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+  box-shadow: 0 4px 12px rgba(210, 190, 161, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover .avatar-placeholder {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(210, 190, 161, 0.5);
+}
+
+/* Info do autor */
+.testimonial-author-info {
+  flex: 1;
+}
+
+.testimonial-author-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #d2bea1;
+  margin-bottom: 2px;
+  transition: color 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-author-name {
+  color: #f1e1c7;
+}
+
+.testimonial-author-role {
+  font-size: 13px;
+  color: #999;
+  font-weight: 400;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .testimonials-section {
+    padding: 80px 0;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 60px 0;
+  }
+
+  .testimonials-header {
+    margin-bottom: 40px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    padding: 24px 20px;
+  }
+
+  .testimonial-text {
+    font-size: 14px;
+  }
+
+  .avatar-placeholder {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+
+  .testimonial-author-name {
+    font-size: 15px;
+  }
+
+  .testimonial-author-role {
+    font-size: 12px;
+  }
+}
+
+/* Animação GSAP de entrada (será aplicada via JS) */
+.testimonial-card[data-gsap-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Performance optimizations */
+.testimonial-card,
+.avatar-placeholder {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 

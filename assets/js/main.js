@@ -52,7 +52,7 @@ function animateFollower() {
 animateFollower();
 
 // Cursor hover effects
-document.querySelectorAll('a, button, .service-card, .cta-button').forEach(el => {
+document.querySelectorAll('a, button, .service-card, .cta-button, .testimonial-card').forEach(el => {
   el.addEventListener('mouseenter', () => {
     cursor.classList.add('cursor-hover');
     cursorFollower.classList.add('cursor-hover');
@@ -223,6 +223,61 @@ document.addEventListener("DOMContentLoaded", () => {
           opacity: 0,
           duration: 0.8,
           delay: i * 0.1
+        });
+      });
+
+      // Animate testimonials section header
+      gsap.from('.testimonials-header', {
+        scrollTrigger: {
+          trigger: '.testimonials-header',
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        },
+        y: 40,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+      });
+
+      // Animate testimonial cards with stagger
+      gsap.utils.toArray('.testimonial-card').forEach((card, i) => {
+        gsap.from(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+          },
+          y: 60,
+          opacity: 0,
+          scale: 0.95,
+          duration: 0.9,
+          delay: i * 0.15,
+          ease: "power2.out"
+        });
+      });
+
+      // Floating animation for testimonial cards
+      gsap.utils.toArray('.testimonial-card').forEach((card, i) => {
+        gsap.to(card, {
+          y: -10,
+          duration: 2 + i * 0.3,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+          delay: i * 0.2
+        });
+      });
+
+      // Parallax effect for testimonial quote icons
+      gsap.utils.toArray('.testimonial-quote-icon').forEach(icon => {
+        gsap.to(icon, {
+          y: 20,
+          scrollTrigger: {
+            trigger: icon,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1
+          }
         });
       });
     }
